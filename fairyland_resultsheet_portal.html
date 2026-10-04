@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairyland School — Resultsheets</title>
+  <meta name="description" content="Resultsheet links for Nursery, KG and Classes 1 to 10.">
+  <style>
+    :root {
+      --primary: #173b6c;
+      --secondary: #2f74c0;
+      --accent: #f4b942;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --shadow: 0 10px 28px rgba(23, 59, 108, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(47,116,192,.10), transparent 30%),
+        linear-gradient(135deg, #f8fbff, var(--bg));
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 42px 20px 55px;
+      text-align: center;
+    }
+
+    .school-name {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: clamp(15px, 2vw, 19px);
+      opacity: .92;
+    }
+
+    main {
+      width: min(1100px, calc(100% - 30px));
+      margin: -28px auto 50px;
+    }
+
+    .panel {
+      background: var(--card);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 25px;
+    }
+
+    .search {
+      width: min(320px, 100%);
+      padding: 13px 16px;
+      border: 1px solid #d6dce5;
+      border-radius: 12px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(47,116,192,.12);
+    }
+
+    .group-title {
+      margin: 28px 0 14px;
+      font-size: 18px;
+      color: var(--primary);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+    }
+
+    .class-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 17px;
+      border: 1px solid #e2e8f0;
+      border-radius: 15px;
+      background: #fff;
+      transition: .2s ease;
+    }
+
+    .class-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 18px rgba(23,59,108,.10);
+      border-color: #bfd2e8;
+    }
+
+    .class-name {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .result-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 12px;
+      border-radius: 9px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .result-link:hover {
+      background: var(--secondary);
+    }
+
+    .notice {
+      margin-top: 24px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #fff8e7;
+      border: 1px solid #f3d78a;
+      color: #705510;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 0 20px 30px;
+      font-size: 13px;
+    }
+
+    .hidden { display: none; }
+
+    @media (max-width: 560px) {
+      .panel { padding: 20px 16px; }
+      .class-card { padding: 14px; }
+      .result-link { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="school-name">FAIRYLAND SCHOOL</h1>
+  <p class="subtitle">Online Resultsheet Portal</p>
+</header>
+
+<main>
+  <section class="panel">
+    <div class="topbar">
+      <h2>Class-wise Resultsheets</h2>
+      <input
+        id="search"
+        class="search"
+        type="search"
+        placeholder="Search class..."
+        aria-label="Search class"
+      >
+    </div>
+
+    <h3 class="group-title">Pre-Primary</h3>
+    <div class="grid">
+      <div class="class-card" data-class="Nursery">
+        <span class="class-name">Nursery</span>
+        <a class="result-link" href="RESULT_NURSERY_URL" target="_blank" rel="noopener">View Result</a>
+      </div>
+      <div class="class-card" data-class="KG-1">
+        <span class="class-name">KG-1</span>
+        <a class="result-link" href="RESULT_KG1_URL" target="_blank" rel="noopener">View Result</a>
+      </div>
+      <div class="class-card" data-class="KG-2">
+        <span class="class-name">KG-2</span>
+        <a class="result-link" href="RESULT_KG2_URL" target="_blank" rel="noopener">View Result</a>
+      </div>
+    </div>
+
+    <h3 class="group-title">Primary & Secondary</h3>
+    <div class="grid">
+      <div class="class-card" data-class="1"><span class="class-name">Class 1</span><a class="result-link" href="RESULT_CLASS_1_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="2"><span class="class-name">Class 2</span><a class="result-link" href="RESULT_CLASS_2_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="3"><span class="class-name">Class 3</span><a class="result-link" href="RESULT_CLASS_3_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="4"><span class="class-name">Class 4</span><a class="result-link" href="RESULT_CLASS_4_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="5"><span class="class-name">Class 5</span><a class="result-link" href="RESULT_CLASS_5_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="6A"><span class="class-name">Class 6A</span><a class="result-link" href="RESULT_CLASS_6A_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="6B"><span class="class-name">Class 6B</span><a class="result-link" href="RESULT_CLASS_6B_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="7A"><span class="class-name">Class 7A</span><a class="result-link" href="RESULT_CLASS_7A_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="7B"><span class="class-name">Class 7B</span><a class="result-link" href="RESULT_CLASS_7B_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="8A"><span class="class-name">Class 8A</span><a class="result-link" href="RESULT_CLASS_8A_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="8B"><span class="class-name">Class 8B</span><a class="result-link" href="RESULT_CLASS_8B_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="9A"><span class="class-name">Class 9A</span><a class="result-link" href="RESULT_CLASS_9A_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="9B"><span class="class-name">Class 9B</span><a class="result-link" href="RESULT_CLASS_9B_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="10A"><span class="class-name">Class 10A</span><a class="result-link" href="RESULT_CLASS_10A_URL" target="_blank" rel="noopener">View Result</a></div>
+      <div class="class-card" data-class="10B"><span class="class-name">Class 10B</span><a class="result-link" href="RESULT_CLASS_10B_URL" target="_blank" rel="noopener">View Result</a></div>
+    </div>
+
+    <div class="notice">
+      <strong>Administrator:</strong> Replace each <code>RESULT_..._URL</code> value in this HTML with the actual resultsheet link for that class.
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 Fairyland School · Resultsheet Portal
+</footer>
+
+<script>
+  const search = document.getElementById("search");
+  const cards = document.querySelectorAll(".class-card");
+
+  search.addEventListener("input", () => {
+    const query = search.value.trim().toLowerCase();
+    cards.forEach(card => {
+      const name = card.dataset.class.toLowerCase();
+      card.classList.toggle("hidden", query && !name.includes(query));
+    });
+  });
+</script>
+
+</body>
+</html>
